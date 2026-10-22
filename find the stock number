@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+	int stok[5];
+	int i;
+	for(i=0;i<=4;i++)
+	{
+		printf("%d. urun stok adeti -> ",i+1);
+		scanf("%d",&stok[i]);
+	}
+	for(i=0;i<=4;i++)
+	{
+		if(stok[i]==0)
+		{
+			printf("Urun-> %d Stok-> %d  Kritik durum:Stok Tukendi.\n",i+1,stok[i]);
+		}
+		if(stok[i]>=1 && stok[i]<=10)
+		{
+			printf("Urun-> %d Stok-> %d  Uyari:Stok azaliyor(Hemen siparis verilmelidir.)\n",i+1,stok[i]);
+		}
+		if(stok[i]>10)
+		{
+			printf("Urun-> %d Stok-> %d  Guvenli durum:Stok Yeterli.\n",i+1,stok[i]);
+		}
+	}
+	
+	return 0;
+}
